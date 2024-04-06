@@ -860,6 +860,12 @@ function menu(){
     rm -rf menu.zip
 }
 
+function ins_udp() {
+clear
+    print_install "INSTALL SSH UDP"
+    wget -q https://sc2.scvps.biz.id/rabah/udp-custom.sh &&  chmod +x udp-custom.sh && ./udp-custom.sh
+}
+
 # Membaut Default Menu 
 function profile(){
 clear
@@ -968,7 +974,6 @@ clear
     install_xray
     ssh
     udp_mini
-    ssh_slow
     ins_SSHD
     ins_dropbear
     ins_vnstat
@@ -977,6 +982,7 @@ clear
     ins_swab
     ins_Fail2ban
     ins_epro
+    ins_udp
     ins_restart
     menu
     profile
